@@ -1,0 +1,130 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "path": "719c6a46-148c-44ec-929c-c9abe3a477b8",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "f4ef6de9-9fa4-4dee-8a23-5b9ba51d26df",
+      "name": "Webhook",
+      "webhookId": "719c6a46-148c-44ec-929c-c9abe3a477b8"
+    },
+    {
+      "parameters": {
+        "voice": {
+          "__rl": true,
+          "value": "Bj9UqZbhQsanLzgalpEG",
+          "mode": "list",
+          "cachedResultName": "Austin - Good ol' Texas boy"
+        },
+        "requestOptions": {}
+      },
+      "type": "@elevenlabs/n8n-nodes-elevenlabs.elevenLabs",
+      "typeVersion": 1,
+      "position": [
+        208,
+        0
+      ],
+      "id": "f06c254b-0349-4303-8fe6-ee4f54c62158",
+      "name": "Get a voice",
+      "credentials": {
+        "elevenLabsApi": {
+          "id": "GnSw5opxk13h6vdd",
+          "name": "ElevenLabs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.4,
+      "position": [
+        624,
+        0
+      ],
+      "id": "91b31725-fe45-4787-ba2e-f10306cf7e35",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{$json[\"to\"] || 'abrarroll2@gmail.com'}}",
+        "subject": "={{$json[\"subject\"] || 'Birthday Invitation'}}",
+        "message": "= {{$json[\"message\"] || 'Birthday treat at UTD on Tuesday 9pm'}}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "0b3e6099-2fcb-4c1a-9979-2e2da565fded",
+      "name": "Send a message",
+      "webhookId": "356919df-1205-4404-b345-e39522379dcb",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "BiQka1phT14R9U7y",
+          "name": "Gmail account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Get a voice",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get a voice": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8b60ec92-083b-4517-a62b-48bda82ce5e4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "cec46c1ae77311c13b24b317b8c670ba71b9b5ce3a4fc9e8977a4644e6db02a3"
+  },
+  "id": "YdaErDsHl8PUEFd6",
+  "tags": []
+}
