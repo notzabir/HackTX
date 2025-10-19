@@ -19,7 +19,7 @@ npm start
 
 Alternatively
 ```powershell
-npx expo start tunnel
+npx expo start --tunnel
 ```
 click a for android
 ```powershell
