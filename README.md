@@ -17,6 +17,16 @@ npm install
 npm start
 ```
 
+Alternatively
+```powershell
+npx expo start tunnel
+```
+click a for android
+```powershell
+a
+```
+
+
 3. Run on a simulator or device using the Expo dev tools.
 
 Project structure
