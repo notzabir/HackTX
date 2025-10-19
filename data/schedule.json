@@ -1,0 +1,13 @@
+{
+  "student": {
+    "name": "Sample Student",
+    "id": "10001234"
+  },
+  "courses": [
+    { "id": "c1", "code": "CS 312", "name": "Foundations of Computer Science", "instructor": "Dr. Ada Lovelace", "credits": 3, "days": "Mon/Wed/Fri", "time": "10:00 - 11:00", "location": "GDC 2.302" },
+    { "id": "c2", "code": "MATH 408C", "name": "Linear Algebra", "instructor": "Dr. Gauss", "credits": 4, "days": "Tue/Thu", "time": "13:00 - 14:30", "location": "GWB 1.104" }
+  ],
+  "organizations": [
+    { "id": "org1", "name": "HackTX", "meeting": "Fridays 18:00", "description": "Student hackathon club." }
+  ]
+}

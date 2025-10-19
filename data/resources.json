@@ -1,0 +1,5 @@
+[
+  { "id": "rec_center", "name": "Student Rec Center", "category": "Health & Wellness", "address": "2101 San Jacinto Blvd", "hours": "6am - 11pm", "phone": "(512) 471-XXXX" },
+  { "id": "health_center", "name": "Counseling & Mental Health Center", "category": "Health & Wellness", "address": "100 W Dean Keeton St", "hours": "8am - 5pm", "phone": "(512) 471-1111" },
+  { "id": "it_help", "name": "UT IT Help Desk", "category": "IT Support", "address": "PCL 2nd floor", "hours": "9am - 6pm", "phone": "(512) 475-9400" }
+]

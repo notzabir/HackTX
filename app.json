@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "UT Austin Virtual Tour",
+    "slug": "ut-austin-virtual-tour",
+    "version": "1.0.0",
+    "platforms": ["ios", "android", "web"],
+    "orientation": "portrait",
+    "icon": "./assets/UT.png",
+    "splash": {
+      "image": "./assets/UT.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "permissions": [
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "ios": {
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "This app needs access to microphone for voice chat functionality."
+      }
+    },
+    "web": {
+      "favicon": "./assets/UT.png"
+    }
+  }
+}

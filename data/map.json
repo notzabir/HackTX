@@ -1,0 +1,20 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7341, 30.2849] },
+      "properties": { "id": "main_building", "name": "Main Building", "description": "Historic Main Building, home to central administration and the iconic tower." }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7332, 30.2856] },
+      "properties": { "id": "engineering", "name": "Engineering Building", "description": "Cockrell School of Engineering facilities and labs." }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-97.7350, 30.2840] },
+      "properties": { "id": "library", "name": "PCL Library", "description": "Perry-Castañeda Library — main research library for students." }
+    }
+  ]
+}
